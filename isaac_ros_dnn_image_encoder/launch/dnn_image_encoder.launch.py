@@ -52,8 +52,8 @@ def launch_setup(context, *args, **kwargs):
     image_stddev = LaunchConfiguration('image_stddev')
     num_blocks = LaunchConfiguration('num_blocks')
 
-    image_input_topic = LaunchConfiguration('image_input_topic', default='image')
-    camera_info_input_topic = LaunchConfiguration('camera_info_input_topic', default='camera_info')
+    image_input_topic = LaunchConfiguration('image_input_topic', default='/color/image_raw')
+    camera_info_input_topic = LaunchConfiguration('camera_info_input_topic', default='/color/camera_info')
     tensor_output_topic = LaunchConfiguration('tensor_output_topic', default='encoded_tensor')
 
     attach_to_shared_component_container_arg = LaunchConfiguration(
