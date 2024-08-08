@@ -283,6 +283,16 @@ def generate_launch_description():
             default_value='dnn_image_encoder',
             description='The namespace to put the DNN image encoder under',
         ),
+        DeclareLaunchArgument(
+            'image_input_topic',
+            default_value='/color/image_raw',
+            description='The namespace to put the DNN image encoder under',
+        ),
+        DeclareLaunchArgument(
+            'camera_info_input_topic',
+            default_value='/color/camera_info',
+            description='The namespace to put the DNN image encoder under',
+        ),
     ]
 
     return LaunchDescription(launch_args + [OpaqueFunction(function=launch_setup)])
